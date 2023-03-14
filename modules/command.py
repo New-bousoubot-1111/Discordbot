@@ -111,7 +111,6 @@ class command(commands.Cog):
 
     embed2=nextcord.Embed(title="コマンド",description=f"***{commands_list}***",color=color)
     await ctx.channel.send(embed=embed,view=util.page_button(embed,embed2))
-    await ctx.channel.send(embed=embed,view=util.info_url(embed))
 
 def setup(bot):
   return bot.add_cog(command(bot))
