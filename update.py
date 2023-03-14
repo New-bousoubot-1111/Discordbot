@@ -28,7 +28,7 @@ if now_version != new_version:
   #update.py
   with open('json/version.txt','w') as f:
     f.write(new_version)
-  with open('util.py','w') as f:
+  with open('update.py','w') as f:
     updatepy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/update.py").text
     f.write(updatepy)
   #command.py
