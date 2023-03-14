@@ -31,6 +31,12 @@ if now_version != new_version:
   with open('update.py','w') as f:
     updatepy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/update.py").text
     f.write(updatepy)
+  #adimin.py
+  with open('json/version.txt','w') as f:
+    f.write(new_version)
+  with open('modules/adimin.py','w') as f:
+    adiminpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/modules/adimin.py").text
+    f.write(adiminpy)
   #command.py
   with open('json/version.txt','w') as f:
     f.write(new_version)
