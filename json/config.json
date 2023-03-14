@@ -1,0 +1,7 @@
+{
+	"prefix":"t.",
+	"color":"0x00ffee",
+  "owners":[800255014463078462],
+	"modules":["command","tasks"],
+  "errorlog":"1041001428170326138"
+}

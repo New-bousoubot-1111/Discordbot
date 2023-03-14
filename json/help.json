@@ -1,0 +1,11 @@
+{
+	"prefix":"b.",
+	"color":"0x00ffee",
+  "owners":[800255014463078462],
+  "notice":"",
+  "commands_list":[
+"help - 現在使っているコマンド\n",
+"eew,","eew2 - 地震情報を表示する\n"
+],
+  "server":"https://discord.gg/3VFpmSEugD"
+}
