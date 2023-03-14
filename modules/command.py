@@ -5,9 +5,9 @@ import requests
 from colorama import Fore
 import util
 
-with open('config.json','r') as f:
+with open('json/config.json','r') as f:
 	config = json.load(f)
-with open('help.json','r') as f:
+with open('json/help.json','r') as f:
 	help = json.load(f)
 
 color = nextcord.Colour(int(config['color'],16))
