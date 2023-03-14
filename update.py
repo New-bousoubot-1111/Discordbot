@@ -66,7 +66,7 @@ if now_version != new_version:
   with open('json/version.txt','w') as f:
     f.write(new_version)
   with open('modules/test.py','w') as f:
-    testpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/json/help.json").text
+    testpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/modules/test.py").text
     f.write(testpy)
 
   print(Fore.GREEN + "アップデートが完了しました" + Fore.RESET)
