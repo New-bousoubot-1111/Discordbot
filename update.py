@@ -9,6 +9,9 @@ with open('README.md','w') as f:
 with open('json/version.txt','r') as f:
   now_version = f.read()
 new_version = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/json/version.txt").text
+with open('update.py','r') as f:
+  now_version = f.read()
+new_version = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/update.py").text
 
 if now_version != new_version:
   print(Fore.GREEN + f"バージョン{new_version}へのアップデートを確認しました" + Fore.RESET)
