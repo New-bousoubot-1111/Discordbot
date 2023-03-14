@@ -17,8 +17,7 @@ if now_version != new_version:
   #main.py
   with open('json/version.txt','w') as f:
     f.write(new_version)
-  with open('main.py','w') as f:
-    with open('main.py','r') as f:
+    with open('main.py','w') as f:
       new_code = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/main.py").text
       f.write(new_code)
   #util.py
