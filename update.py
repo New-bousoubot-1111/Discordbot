@@ -2,9 +2,9 @@ import requests
 from colorama import Fore
 
 print(Fore.GREEN + "アップデートを確認しています" + Fore.RESET)
-with open('LICENSE','w') as f:
-  license = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/LICENSE").text
-  f.write(license)
+with open('README.md','w') as f:
+  README = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/README.md").text
+  f.write(README)
 
 with open('json/version.txt','r') as f:
   now_version = f.read()
