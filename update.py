@@ -47,13 +47,13 @@ if now_version != new_version:
   with open('json/version.txt','w') as f:
     f.write(new_version)
   with open('json/config.json','w') as f:
-    configjson = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/main.py").text
+    configjson = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/json/config.json").text
     f.write(configjson)
   #help.json
   with open('json/version.txt','w') as f:
     f.write(new_version)
   with open('json/help.json','w') as f:
-    helpjson = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/main.py").text
+    helpjson = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/json/help.json").text
     f.write(helpjson)
   print(Fore.GREEN + "アップデートが完了しました" + Fore.RESET)
 else:
