@@ -1,2 +1,2 @@
 bousoubot-1.0.0
-update file = command.py
+update file = update.py
