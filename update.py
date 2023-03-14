@@ -2,15 +2,17 @@ import requests
 from colorama import Fore
 
 print(Fore.GREEN + "アップデートを確認しています" + Fore.RESET)
-with open('README.md','r') as f:
-  now_readme = f.read()
+with open('README.md','w') as f:
+  now_readme = None
   new_readme = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/README.md").text
   f.write(new_readme)
 
-if now_README != new_README:
+if now_readme != new_readme:
   print(Fore.GREEN + f"READMEの更新を確認しました" + Fore.RESET)
   print(Fore.GREEN + "READMEを更新中です" + Fore.RESET)
   print(Fore.GREEN + "READMEの更新が完了しました" + Fore.RESET)
+else:
+  None
 
 with open('json/version.txt','r') as f:
   now_version = f.read()
