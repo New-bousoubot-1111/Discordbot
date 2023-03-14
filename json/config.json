@@ -2,6 +2,6 @@
 	"prefix":"t.",
 	"color":"0x00ffee",
   "owners":[800255014463078462],
-	"modules":["adimin","command","tasks"],
+	"modules":["admin","command","tasks"],
   "errorlog":"1041001428170326138"
 }
