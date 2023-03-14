@@ -17,14 +17,16 @@ if now_version != new_version:
   with open('json/version.txt','w') as f:
     f.write(new_version)
   with open('main.py','w') as f:
-    mainpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/main.py").text
-    f.write(mainpy)
+    with open('main.py','r') as f:
+      mainpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/main.py").text
+      f.write(mainpy)
   #util.py
   with open('json/version.txt','w') as f:
     f.write(new_version)
   with open('util.py','w') as f:
-    utilpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/util.py").text
-    f.write(utilpy)
+    with open('util.py','r') as f:
+      utilpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/util.py").text
+      f.write(utilpy)
   #update.py
   with open('json/version.txt','w') as f:
     f.write(new_version)
@@ -35,39 +37,37 @@ if now_version != new_version:
   with open('json/version.txt','w') as f:
     f.write(new_version)
   with open('modules/admin.py','w') as f:
-    adiminpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/modules/admin.py").text
-    f.write(adiminpy)
+    with open('modules/admin.py','r') as f:
+      adiminpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/modules/admin.py").text
+      f.write(adiminpy)
   #command.py
   with open('json/version.txt','w') as f:
     f.write(new_version)
   with open('modules/command.py','w') as f:
-    commandpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/modules/command.py").text
-    f.write(commandpy)
+    with open('modules/command.py','r') as f:
+      commandpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/modules/command.py").text
+      f.write(commandpy)
   #tasks.py
   with open('json/version.txt','w') as f:
     f.write(new_version)
   with open('modules/tasks.py','w') as f:
-    taskspy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/modules/tasks.py").text
-    f.write(taskspy)
+    with open('modules/tasks.py','r') as f:
+      taskspy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/modules/tasks.py").text
+      f.write(taskspy)
   #config.json
   with open('json/version.txt','w') as f:
     f.write(new_version)
   with open('json/config.json','w') as f:
-    configjson = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/json/config.json").text
-    f.write(configjson)
+    with open('json/config.json','r') as f:
+      configjson = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/json/config.json").text
+      f.write(configjson)
   #help.json
   with open('json/version.txt','w') as f:
     f.write(new_version)
   with open('json/help.json','w') as f:
-    helpjson = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/json/help.json").text
-    f.write(helpjson)
-
- #test
-  with open('json/version.txt','w') as f:
-    f.write(new_version)
-  with open('modules/test.py','w') as f:
-    testpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/modules/test.py").text
-    f.write(testpy)
+    with open('json/help.json','r') as f:
+      helpjson = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/json/help.json").text
+      f.write(helpjson)
 
   print(Fore.GREEN + "アップデートが完了しました" + Fore.RESET)
 else:
