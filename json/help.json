@@ -1,7 +1,7 @@
 {
 	"prefix":"b.",
 	"color":"0x00ffee",
-  "owners":[800255014463078462],
+  "owners":"800255014463078462",
   "notice":"",
   "commands_list":[
 "help - 現在使っているコマンド\n",

@@ -12,7 +12,8 @@ with open('json/config.json', 'r') as f:
 intents = nextcord.Intents.all()
 bot = commands.Bot(
 	command_prefix=config['prefix'],
-	help_command=None
+	help_command=None,
+        intents=intents
 )
 for module in config['modules']:
     bot.load_extension(f"modules.{module}")
