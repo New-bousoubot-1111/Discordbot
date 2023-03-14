@@ -19,6 +19,18 @@ if now_version != new_version:
   with open('main.py','w') as f:
     mainpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/main.py").text
     f.write(mainpy)
+  #util.py
+  with open('json/version.txt','w') as f:
+    f.write(new_version)
+  with open('util.py','w') as f:
+    utilpy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/util.py").text
+    f.write(utilpy)
+  #update.py
+  with open('json/version.txt','w') as f:
+    f.write(new_version)
+  with open('util.py','w') as f:
+    updatepy = requests.get("https://raw.githubusercontent.com/New-bousoubot-1111/Discordbot/main/update.py").text
+    f.write(updatepy)
   #command.py
   with open('json/version.txt','w') as f:
     f.write(new_version)
