@@ -98,6 +98,32 @@ class command(commands.Cog):
           await ctx.send(embed=embed)
   
   @commands.command()
+  async def notice_setup(self,ctx):
+    if ctx.author.guild_permissions.manage_messages:
+      with open('json/channel.json','r') as file:
+        files = json.load(file)
+        files[int(ctx.guild.id)] = int(ctx.channel.id)
+      with open('json/channel.json','w') as file:
+        json.dump(files,file,indent=4)
+      embed=nextcord.Embed(description=f"{ctx.channel.mention}を登録しました")
+      await ctx.send(embed=embed)
+
+  @commands.command()
+  async def notice_remove(self,ctx):
+    if ctx.author.guild_permissions.manage_messages:
+      try:
+        with open('json/channel.json','r') as file:
+          files = json.load(file)
+          files.pop(str(ctx.guild.id))
+        with open('json/channel.json','w') as file:
+          json.dump(files,file,indent=4)
+        embed=nextcord.Embed(description=f"このサーバーの登録されているチャンネルを解除しました")
+        await ctx.send(embed=embed)
+except KeyError:
+        embed=nextcord.Embed(description=f"このサーバーに登録されているチャンネルがありません")
+        await ctx.send(embed=embed)
+
+  @commands.command()
   async def help(self,ctx):
     creators = []
     for creator in help['owners']:
