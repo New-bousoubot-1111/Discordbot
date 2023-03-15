@@ -1,1 +1,1 @@
-bousoubot-1.1.3
+bousoubot-1.0.0
