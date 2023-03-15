@@ -119,7 +119,7 @@ class command(commands.Cog):
           json.dump(files,file,indent=4)
         embed=nextcord.Embed(description=f"このサーバーの登録されているチャンネルを解除しました")
         await ctx.send(embed=embed)
-except KeyError:
+      except KeyError:
         embed=nextcord.Embed(description=f"このサーバーに登録されているチャンネルがありません")
         await ctx.send(embed=embed)
 
