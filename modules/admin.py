@@ -1,16 +1,39 @@
 import nextcord
 from nextcord.ext import commands
 from colorama import Fore
+import json
+
+with open('json/channel.json','r') as r:
+  load = json.load(r)
 
 class admin(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self._last_member = None
-
+  
     @commands.Cog.listener()
     async def on_ready(self):
       print(Fore.BLUE + "|admin         |" + Fore.RESET)
-  
+
+    #登録されたチャンネルにお知らせを送信する
+    @commands.command()
+    async def notice(self, ctx, args=None, args2=None):
+        if args == None:
+            em = nextcord.Embed(title="Error",description="タイトルを書いてください",color=0xff0000)
+            await ctx.send(embed=em)
+        if args2 == None:
+            em = nextcord.Embed(title="Error",description="内容を書いてください",color=0xff0000)
+            await ctx.send(embed=em)
+        else:
+            if ctx.author.guild_permissions.administrator:
+              for guild in load:
+                em=nextcord.Embed(title=args, description=args2,color=0x08e2b7)
+              channel = self.bot.get_channel(int(load[guild]))
+              await channel.send(embed=em)
+            else:
+              em=nextcord.Embed(title="Error", description="このコマンドは管理者専用です",color=0xff0000)
+              await ctx.send(embed=em)
+      
     #メッセージ削除
     @commands.command()
     async def clear(self, ctx, amount : int=None):
@@ -66,6 +89,8 @@ class admin(commands.Cog):
             else:
                 em=nextcord.Embed(title="Error", description="このコマンドは管理者専用です",color=0xff0000)
                 await ctx.send(embed=em)
+
+
 
 def setup(bot):
     return bot.add_cog(admin(bot))
